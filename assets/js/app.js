@@ -53,8 +53,7 @@
     $('#catDDList').innerHTML = `<button data-cat="all"><span class="em">📖</span>همه‌ی حرکتها</button>${dd}`;
     $('#sbCats').innerHTML = S.categories.map(c =>
       `<li><button data-cat="${c.slug}"><span>${c.icon}</span>${esc(c.name)}<span class="n">${fa(countIn(c.slug))}</span></button></li>`).join('');
-    const email = S.site.social?.email;
-    $('#sbFoot').innerHTML = `batis${email ? `<br><a href="mailto:${esc(email)}">${esc(email)}</a>` : ''}`;
+    $('#sbFoot').innerHTML = `<span style="color:var(--muted);font-size:.85rem">Batis</span>`;
   }
 
   function renderHero() {
@@ -159,12 +158,22 @@
     if ($('#footNote')) $('#footNote').textContent = S.site.footerNote || '';
     if ($('#footCats')) $('#footCats').innerHTML = S.categories.filter(c => c.slug !== 'all').slice(0, 6).map(c => `<li><a href="#categories" data-cat="${c.slug}">${esc(c.name)}</a></li>`).join('');
     const soc = S.site.social || {};
-    const links = [];
-    if (soc.instagram) links.push(`<li><a href="${esc(soc.instagram)}" target="_blank" rel="noopener">اینستاگرام</a></li>`);
-    if (soc.telegram) links.push(`<li><a href="${esc(soc.telegram)}" target="_blank" rel="noopener">تلگرام</a></li>`);
-    if (soc.bale) links.push(`<li><a href="${esc(soc.bale)}" target="_blank" rel="noopener">بله</a></li>`);
-    if (soc.email) links.push(`<li><a href="mailto:${esc(soc.email)}">${esc(soc.email)}</a></li>`);
-    if ($('#footContact')) $('#footContact').innerHTML = links.join('');
+    const items = [
+      { key: 'instagram', label: 'اینستاگرام', href: soc.instagram || '' },
+      { key: 'telegram', label: 'تلگرام', href: soc.telegram || '' },
+      { key: 'bale', label: 'بله', href: soc.bale || '' },
+      { key: 'email', label: 'ایمیل', href: soc.email ? ('mailto:' + soc.email) : '', text: soc.email || '' }
+    ];
+    if ($('#footContact')) {
+      $('#footContact').innerHTML = items.map(it => {
+        if (it.href) {
+          const label = it.key === 'email' ? esc(it.text) : 'مشاهده';
+          const extra = it.key !== 'email' ? ' target="_blank" rel="noopener"' : '';
+          return `<li><span class="foot-contact-label">${it.label}</span> <a href="${esc(it.href)}"${extra}>${label}</a></li>`;
+        }
+        return `<li><span class="foot-contact-label">${it.label}</span> <span style="opacity:.55">—</span></li>`;
+      }).join('');
+    }
   }
 
   function renderCarousel() {
