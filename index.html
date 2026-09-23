@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Batis | بدنسازی و کراس‌فیت</title>
   <meta name="description" content="Batis؛ مرجع حرکات بدنسازی و کراس‌فیت حرفه‌ای.">
-  <meta name="theme-color" content="#1a1a1a">
+  <meta name="theme-color" content="#0a0c10">
   <meta property="og:title" content="Batis | حرکات بدنسازی">
   <meta property="og:description" content="مرجع حرکات بدنسازی و کراس‌فیت با آموزش دقیق و نکات اجرایی.">
   <meta property="og:type" content="website">
@@ -16,13 +16,15 @@
     document.documentElement.classList.add('js');
     try {
       var t = localStorage.getItem('batis-theme');
-      if (t) document.documentElement.setAttribute('data-theme', t);
-    } catch (e) {}
+      document.documentElement.setAttribute('data-theme', t || 'dark');
+    } catch (e) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Lalezar&family=Vazirmatn:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/extras.css">
 </head>
@@ -127,9 +129,11 @@
       <div class="hero-tags" id="heroTags"></div>
       <p class="hero-count" id="stats"></p>
     </div>
-   <div class="hero-art" aria-hidden="true">
-  <div class="art" style="--from:#e85d04;--to:#9d0208;font-size:6rem;display:flex;align-items:center;justify-content:center;min-height:280px;border-radius:24px">💪</div>
-</div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="art" style="--from:#e85d04;--to:#9d0208">
+        <span class="em">💪</span>
+      </div>
+    </div>
   </div>
   <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c120 40 240 40 360 10s240-50 360-30 240 60 360 50 240-40 360-20V90H0z"/></svg>
 </section>
