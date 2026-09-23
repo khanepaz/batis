@@ -20,6 +20,6 @@
     {"itemId": "deadlift", "badge": "کل بدن", "title": "ددلیفت", "text": "حرکت ترکیبی قدرتی برای کل بدن.", "image": ""},
     {"itemId": "pull-up", "badge": "بالاتنه", "title": "بارفیکس", "text": "بهترین حرکت وزن بدن برای پشت و بازو.", "image": ""}
   ],
-  "social": {"instagram": "", "telegram": "", "email": "h.khanepaz@gmail.com", "bale": ""},
+  "social": {"instagram": "", "telegram": "", "email": "", "bale": ""},
   "footerNote": "ساخته‌شده برای ورزشکاران واقعی — Batis"
 }
