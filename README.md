@@ -3,7 +3,7 @@
 سایت استاتیک + پنل ادمین روی GitHub Pages.
 
 - ویترین: `index.html`
-- پنل مدیریت: `admin.html` (با GitHub PAT)
+- پنل مدیریت: `admin.html` (با GitHub PAT – دسترسی Contents Read/Write)
 - داده‌ها: پوشه `data/`
 
-معماری طبق قالب استاندارد `khanepaz/readme`.
+معماری طبق قالب استاندارد.
