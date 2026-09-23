@@ -1,4 +1,13 @@
-/* extras loaded */
+/* extras + Batis helpers */
+.ing { position: static !important; }
 .chip-row{display:flex;flex-wrap:wrap;gap:.4rem;margin:.5rem 0}
 .chip{display:inline-block;padding:.25rem .6rem;border-radius:999px;background:var(--surface-2,#f0f0f0);font-size:.85rem}
 .video-wrap{margin:1rem 0}
+[data-theme=dark] .chip{background:#333}
+.stat{background:var(--surface-2,#222);padding:1.2rem;border-radius:12px;text-align:center}
+.stat b{display:block;font-size:1.8rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:1rem}
+.tbl{width:100%;border-collapse:collapse}
+.tbl th,.tbl td{padding:.5rem;border-bottom:1px solid var(--border,#333);text-align:right}
+.card{background:var(--surface,#181b22);border:1px solid var(--border,#2a2f3a);border-radius:12px;padding:1rem;margin-bottom:1rem}
+.card-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:.8rem}
