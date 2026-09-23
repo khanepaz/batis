@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مدیریت Batis</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+  <div id="loginScreen" class="login-screen">
+    <div class="login-card">
+      <div class="login-logo">
+        <span class="logo-mark">💪</span>
+        <h1>مدیریت Batis</h1>
+      </div>
+      <p class="login-desc">برای ویرایش محتوا، توکن گیت‌هاب خود را وارد کنید.</p>
+      <form id="loginForm" autocomplete="off">
+        <label class="field">
+          <span>Personal Access Token</span>
+          <input type="password" id="tokenInput" name="token" placeholder="github_pat_..." autocomplete="off" dir="ltr">
+        </label>
+        <label class="check">
+          <input type="checkbox" id="rememberToken">
+          <span>تا بستن این تب یادت بماند</span>
+        </label>
+        <button type="submit" class="btn btn-primary" id="loginBtn">ورود به پنل</button>
+      </form>
+      <p class="login-hint">
+        توکن باید دسترسی <strong>Contents: Read and write</strong> روی ریپوی <code>batis</code> داشته باشد.
+        <a href="https://github.com/settings/tokens?type=beta" target="_blank" rel="noopener">ساخت توکن ←</a>
+      </p>
+      <p id="loginError" class="error" hidden></p>
+    </div>
+  </div>
+
+  <div id="app" class="app" hidden>
+    <aside class="sidebar">
+      <div class="sb-brand">
+        <span>💪</span>
+        <strong>Batis</strong>
+      </div>
+      <nav class="sb-nav" id="sbNav">
+        <button type="button" data-tab="dashboard" class="active">داشبورد</button>
+        <button type="button" data-tab="items">حرکات</button>
+        <button type="button" data-tab="categories">دسته‌بندی‌ها</button>
+        <button type="button" data-tab="carousel">کاروسل</button>
+        <button type="button" data-tab="tutorials">آموزش‌ها</button>
+        <button type="button" data-tab="gallery">گالری</button>
+        <button type="button" data-tab="comments">نظرات</button>
+        <button type="button" data-tab="site">تنظیمات سایت</button>
+      </nav>
+      <div class="sb-foot">
+        <a href="index.html" target="_blank" class="btn btn-ghost btn-sm">مشاهده سایت</a>
+        <button type="button" class="btn btn-ghost btn-sm" id="logoutBtn">خروج</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <h2 id="pageTitle">داشبورد</h2>
+        <div class="topbar-actions">
+          <span id="saveStatus" class="status"></span>
+          <button type="button" class="btn btn-primary" id="saveAllBtn" hidden>ذخیره تغییرات</button>
+        </div>
+      </header>
+      <div class="content" id="content"></div>
+    </main>
+  </div>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-box" id="modalBox"></div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="assets/js/admin.js"></script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('loginBtn').click();
+    });
+  </script>
+</body>
+</html>
