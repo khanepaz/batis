@@ -1,48 +1,92 @@
-/* extras + Batis helpers — no overrides for main grid/card */
+/* extras + carousel overrides */
 .ing { position: static !important; }
 .chip-row { display: flex; flex-wrap: wrap; gap: .45rem; margin: .5rem 0; }
-.chip {
-  display: inline-block;
-  padding: .3rem .7rem;
-  border-radius: 999px;
-  background: var(--surface-2);
-  font-size: .85rem;
-}
+.chip { display: inline-block; padding: .3rem .7rem; border-radius: 999px; background: var(--surface-2); font-size: .85rem; }
 .video-wrap { margin: 1.1rem 0; border-radius: 14px; overflow: hidden; }
 .video-wrap iframe { width: 100%; aspect-ratio: 16/9; border: 0; display: block; }
-
-.stat {
-  background: var(--surface-2);
-  padding: 1.25rem;
-  border-radius: 14px;
-  text-align: center;
-  border: 1px solid var(--border);
-}
+.stat { background: var(--surface-2); padding: 1.25rem; border-radius: 14px; text-align: center; border: 1px solid var(--border); }
 .stat b { display: block; font-size: 1.85rem; color: var(--accent); }
-
 .tbl { width: 100%; border-collapse: collapse; }
-.tbl th, .tbl td {
-  padding: .55rem .65rem;
-  border-bottom: 1px solid var(--border);
-  text-align: right;
-}
+.tbl th, .tbl td { padding: .55rem .65rem; border-bottom: 1px solid var(--border); text-align: right; }
+.admin-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; }
+.admin-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; margin-bottom: 1rem; }
 
-/* admin-only helpers (scoped) */
-.admin-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 1rem;
-}
-.admin-card {
-  background: var(--surface);
+/* Carousel slider */
+.sec-carousel { padding-top: 0.5rem; padding-bottom: 2rem; }
+.carousel {
+  position: relative;
+  height: clamp(280px, 42vw, 380px);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background: var(--surface-2);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1rem;
-  margin-bottom: 1rem;
 }
-.admin-card .card-h {
+.slide {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(12px);
+  transition: opacity .45s ease, transform .45s ease, visibility .45s;
+  z-index: 0;
+  background: var(--surface);
+}
+.slide.on {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  z-index: 1;
+}
+.slide-art { min-height: 100%; position: relative; }
+.slide-art .art { height: 100%; min-height: 100%; border-radius: 0; }
+.slide-art .art .em { font-size: clamp(4rem, 10vw, 6rem); }
+.slide-body {
+  padding: 2rem 2.1rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: .8rem;
+  flex-direction: column;
+  justify-content: center;
+  gap: .35rem;
+}
+.slide-body h3 { margin: .35rem 0; font-size: clamp(1.35rem, 2.5vw, 1.75rem); font-weight: 800; }
+.slide-body p { margin: 0 0 1rem; color: var(--muted); font-size: 1rem; line-height: 1.65; }
+.slide-body .badge {
+  display: inline-block; width: fit-content;
+  background: var(--accent-soft); color: var(--accent);
+  padding: .28rem .75rem; border-radius: 999px; font-size: .82rem; font-weight: 700;
+}
+.car-btn {
+  position: absolute; top: 50%; z-index: 5; transform: translateY(-50%);
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 90%, transparent);
+  backdrop-filter: blur(8px); color: var(--text);
+  font-size: 1.4rem; line-height: 1; cursor: pointer;
+  display: grid; place-items: center; transition: .18s; box-shadow: var(--shadow);
+}
+.car-btn:hover {
+  background: var(--accent); color: #fff; border-color: var(--accent);
+  transform: translateY(-50%) scale(1.06);
+}
+.car-btn.prev { right: 1rem; }
+.car-btn.next { left: 1rem; }
+.dots {
+  position: absolute; z-index: 5; bottom: 1rem; inset-inline: 0;
+  display: flex; justify-content: center; gap: .45rem;
+}
+.dots button {
+  width: 9px; height: 9px; padding: 0; border-radius: 999px; border: 0;
+  background: color-mix(in srgb, var(--text) 25%, transparent);
+  cursor: pointer; transition: width .3s ease, background .3s;
+}
+.dots button[aria-current="true"] { width: 28px; background: var(--accent); }
+@media (max-width: 860px) {
+  .carousel { height: clamp(420px, 70vw, 520px); }
+  .slide { grid-template-columns: 1fr; grid-template-rows: 1fr auto; }
+  .slide-art { min-height: 180px; order: -1; }
+  .slide-body { padding: 1.25rem 1.4rem 3.2rem; }
+  .car-btn { top: 28%; }
 }
