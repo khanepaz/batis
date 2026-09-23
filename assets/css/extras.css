@@ -1,0 +1,5 @@
+/* extras - minor helpers */
+.chip-row{display:flex;flex-wrap:wrap;gap:.4rem;margin:.5rem 0}
+.chip{display:inline-block;padding:.25rem .6rem;border-radius:999px;background:var(--surface-2,#f0f0f0);font-size:.85rem}
+.video-wrap{margin:1rem 0}
+[data-theme=dark] .chip{background:#333}
