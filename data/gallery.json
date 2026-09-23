@@ -1,0 +1,42 @@
+[
+  {
+    "id": "g1",
+    "caption": "پرس سینه — فرم صحیح",
+    "ratio": "1/1",
+    "itemId": "bench-press",
+    "image": "",
+    "gif": "",
+    "video": "",
+    "art": { "emoji": "🏋️", "from": "#e85d04", "to": "#9d0208" }
+  },
+  {
+    "id": "g2",
+    "caption": "اسکوات عمیق",
+    "ratio": "4/5",
+    "itemId": "squat",
+    "image": "",
+    "gif": "",
+    "video": "",
+    "art": { "emoji": "🦵", "from": "#f48c06", "to": "#dc2f02" }
+  },
+  {
+    "id": "g3",
+    "caption": "ددلیفت — شروع حرکت",
+    "ratio": "1/1",
+    "itemId": "deadlift",
+    "image": "",
+    "gif": "",
+    "video": "",
+    "art": { "emoji": "🔥", "from": "#dc2f02", "to": "#6a040f" }
+  },
+  {
+    "id": "g4",
+    "caption": "بارفیکس کامل",
+    "ratio": "3/4",
+    "itemId": "pull-up",
+    "image": "",
+    "gif": "",
+    "video": "",
+    "art": { "emoji": "💪", "from": "#e85d04", "to": "#9d0208" }
+  }
+]
