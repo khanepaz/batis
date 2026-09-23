@@ -1,82 +1,12 @@
 [
-  {
-    "slug": "all",
-    "name": "همه",
-    "icon": "💪",
-    "desc": "تمام حرکات",
-    "order": 0,
-    "image": ""
-  },
-  {
-    "slug": "upper",
-    "name": "بالاتنه",
-    "icon": "🏋️",
-    "desc": "سینه، شانه، پشت و بازو",
-    "order": 1,
-    "image": ""
-  },
-  {
-    "slug": "lower",
-    "name": "پایین‌تنه",
-    "icon": "🦵",
-    "desc": "پا، باسن و ساق",
-    "order": 2,
-    "image": ""
-  },
-  {
-    "slug": "men",
-    "name": "مردانه",
-    "icon": "♂️",
-    "desc": "حرکات مناسب آقایان",
-    "order": 3,
-    "image": ""
-  },
-  {
-    "slug": "women",
-    "name": "زنانه",
-    "icon": "♀️",
-    "desc": "حرکات مناسب بانوان",
-    "order": 4,
-    "image": ""
-  },
-  {
-    "slug": "seated",
-    "name": "نشسته",
-    "icon": "🪑",
-    "desc": "حرکات در حالت نشسته",
-    "order": 5,
-    "image": ""
-  },
-  {
-    "slug": "standing",
-    "name": "ایستاده",
-    "icon": "🧍",
-    "desc": "حرکات در حالت ایستاده",
-    "order": 6,
-    "image": ""
-  },
-  {
-    "slug": "lying",
-    "name": "درازکش",
-    "icon": "🛏️",
-    "desc": "حرکات در حالت درازکش",
-    "order": 7,
-    "image": ""
-  },
-  {
-    "slug": "seniors",
-    "name": "سالمندان",
-    "icon": "🧓",
-    "desc": "حرکات ایمن برای سالمندان",
-    "order": 8,
-    "image": ""
-  },
-  {
-    "slug": "neuro",
-    "name": "عصب‌عضله",
-    "icon": "🧠",
-    "desc": "تمرینات عصب‌عضلانی و هماهنگی",
-    "order": 9,
-    "image": ""
-  }
+  {"slug": "all", "name": "همه", "icon": "💪", "desc": "تمام حرکات", "order": 0, "image": ""},
+  {"slug": "upper", "name": "بالاتنه", "icon": "🏋️", "desc": "سینه، شانه، پشت و بازو", "order": 1, "image": ""},
+  {"slug": "lower", "name": "پایین‌تنه", "icon": "🦵", "desc": "پا، باسن و ساق", "order": 2, "image": ""},
+  {"slug": "men", "name": "مردانه", "icon": "♂️", "desc": "حرکات مناسب آقایان", "order": 3, "image": ""},
+  {"slug": "women", "name": "زنانه", "icon": "♀️", "desc": "حرکات مناسب بانوان", "order": 4, "image": ""},
+  {"slug": "seated", "name": "نشسته", "icon": "🪑", "desc": "حرکات در حالت نشسته", "order": 5, "image": ""},
+  {"slug": "standing", "name": "ایستاده", "icon": "🧍", "desc": "حرکات در حالت ایستاده", "order": 6, "image": ""},
+  {"slug": "lying", "name": "درازکش", "icon": "🛏️", "desc": "حرکات در حالت درازکش", "order": 7, "image": ""},
+  {"slug": "seniors", "name": "سالمندان", "icon": "🧓", "desc": "حرکات ایمن برای سالمندان", "order": 8, "image": ""},
+  {"slug": "neuro", "name": "عصب‌عضله", "icon": "🧠", "desc": "تمرینات عصب‌عضلانی و هماهنگی", "order": 9, "image": ""}
 ]

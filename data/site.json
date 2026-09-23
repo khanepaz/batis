@@ -15,40 +15,11 @@
     "years": "۱"
   },
   "carousel": [
-    {
-      "itemId": "bench-press",
-      "badge": "بالاتنه",
-      "title": "پرس سینه با هالتر",
-      "text": "حرکت پایه برای ساخت سینه و قدرت بالاتنه.",
-      "image": ""
-    },
-    {
-      "itemId": "squat",
-      "badge": "پایین‌تنه",
-      "title": "اسکوات",
-      "text": "شاه‌حرکت پایین‌تنه برای قدرت و حجم پاها.",
-      "image": ""
-    },
-    {
-      "itemId": "deadlift",
-      "badge": "کل بدن",
-      "title": "ددلیفت",
-      "text": "حرکت ترکیبی قدرتی برای کل بدن.",
-      "image": ""
-    },
-    {
-      "itemId": "pull-up",
-      "badge": "بالاتنه",
-      "title": "بارفیکس",
-      "text": "بهترین حرکت وزن بدن برای پشت و بازو.",
-      "image": ""
-    }
+    {"itemId": "bench-press", "badge": "بالاتنه", "title": "پرس سینه با هالتر", "text": "حرکت پایه برای ساخت سینه و قدرت بالاتنه.", "image": ""},
+    {"itemId": "squat", "badge": "پایین‌تنه", "title": "اسکوات", "text": "شاه‌حرکت پایین‌تنه برای قدرت و حجم پاها.", "image": ""},
+    {"itemId": "deadlift", "badge": "کل بدن", "title": "ددلیفت", "text": "حرکت ترکیبی قدرتی برای کل بدن.", "image": ""},
+    {"itemId": "pull-up", "badge": "بالاتنه", "title": "بارفیکس", "text": "بهترین حرکت وزن بدن برای پشت و بازو.", "image": ""}
   ],
-  "social": {
-    "instagram": "",
-    "telegram": "",
-    "email": "h.khanepaz@gmail.com",
-    "bale": ""
-  },
+  "social": {"instagram": "", "telegram": "", "email": "h.khanepaz@gmail.com", "bale": ""},
   "footerNote": "ساخته‌شده برای ورزشکاران واقعی — Batis"
 }
