@@ -167,11 +167,11 @@
     if ($('#footContact')) {
       $('#footContact').innerHTML = items.map(it => {
         if (it.href) {
-          const label = it.key === 'email' ? esc(it.text) : 'مشاهده';
+          const linkText = it.key === 'email' ? esc(it.text) : 'مشاهده';
           const extra = it.key !== 'email' ? ' target="_blank" rel="noopener"' : '';
-          return `<li><span class="foot-contact-label">${it.label}</span> <a href="${esc(it.href)}"${extra}>${label}</a></li>`;
+          return `<li><span class="foot-contact-label">${it.label}</span><a href="${esc(it.href)}"${extra}>${linkText}</a></li>`;
         }
-        return `<li><span class="foot-contact-label">${it.label}</span> <span style="opacity:.55">—</span></li>`;
+        return `<li><span class="foot-contact-label">${it.label}</span><span style="opacity:.5">—</span></li>`;
       }).join('');
     }
   }
